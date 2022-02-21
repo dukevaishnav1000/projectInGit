@@ -1,0 +1,65 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body{
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    font-family: 'Arial','Franklin Gothic Medium', 'Arial Narrow', 'Arial' ;
+}
+
+.timer{
+    color:yellow;
+    margin:30px auto;
+    font-size:40;
+    font-weight:800;
+}
+
+.container{
+    margin-top:70px;
+    background-color:yellow;
+    max-width: 80%;
+    width:80%;
+    padding:.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+ .quoteDisplay{
+     padding:10px;
+    font-size:25;
+    text-align: justify;
+} 
+
+
+.quoteInput{
+    font-family: 'Arial','Franklin Gothic Medium', 'Arial Narrow', 'Arial';
+    padding:10px;
+    font-size:25;
+    margin-top:40px;
+    resize:none;
+    width:100%;
+    height:35vh;
+    margin-bottom:.5rem;
+    text-align: justify;
+}
+
+.blink{
+
+    animation-name:blinker;
+    animation-duration:1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blinker
+{
+    0% {background-color: yellow;}
+    50% {background-color:#fff}
+    100% {background-color: yellow;}
+}
+
