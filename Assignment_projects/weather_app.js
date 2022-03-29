@@ -26,7 +26,7 @@ window.addEventListener("load",() => {
             {   console.log(timezone)
                 console.log(tempValue)
                 console.log(data)
-                timezone[0].textContent=data.name+","+data.sys.country;
+                timezone[0].value=data.name+","+data.sys.country;
                 temp_descript[0].textContent=data.weather[0].description;
                 tempValue[0].textContent=Math.floor(parseInt(data.main.temp)-273.15).toPrecision(3);
                 Cvalue=tempValue[0].textContent;
