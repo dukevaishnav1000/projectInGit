@@ -24,18 +24,18 @@
 } 
 
 .card {
-max-height:30vh;
-max-width:40vw;
+max-height:100%;
+max-width:100%;
 } 
 
-/* 
+/*  
 @media screen-size and (max-width:768px)
 {
     .card{
-        max-height:30vh;
-        width:100vw;
+        max-height:100vh;
+        width:100%;
     }
-} */
+}  */
 
 /* .loader{
     height:100px;
