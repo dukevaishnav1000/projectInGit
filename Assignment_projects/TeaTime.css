@@ -13,9 +13,9 @@
     padding:15px;
 }
 
-.banner{
+.banner h1{
     width:10%;
-    margin-right:25px;
+    margin-left:25px;
 }
  
 .banner img{
@@ -27,6 +27,15 @@
 max-height:30vh;
 max-width:40vw;
 }
+
+/* 
+@media screen-size and (max-width:768px)
+{
+    .card{
+        max-height:30vh;
+        width:100vw;
+    }
+} */
 
 /* .loader{
     height:100px;
