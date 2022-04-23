@@ -1,0 +1,9 @@
+*{
+    box-sizing: border-box;
+}
+
+ .button{
+    width: 10%;
+    height: 20%;
+} 
+
