@@ -156,15 +156,55 @@ function regionalNews()
      navigator.geolocation.getCurrentPosition(position => {
          long=position.coords.longitude;
          lat=position.coords.latitude;
-        let api_key="716705298df9526d77246c79bb2be025"
-        const api_string= `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${api_key}`
-
+        let api_key_location="716705298df9526d77246c79bb2be025"
+        const api_string= `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${api_key_location}`;
+        
         fetch(api_string)
         .then(response => {
             return response.json()
         }).then(data =>
             {   console.log(data)
+
+                console.log(data.name);
+                console.log(data.sys.country);
+
+                main_row.innerHTMl=`<div class="col col-md-4 col-sm-6 col-12 m-0 mt-3">
+                <div class="card bg-dark text-white ">
+                    <img src="images/tiger.jpg" class="card-img" alt="...">
+                    <div class="hider"></div>
+                    <div class="card-img-overlay">
+                        
+                        <h4 class="card-title mt"></h4>
+                        <p class="card-text">Last updated 3 mins ago</p>
+                    </div>
+                </div>
+            </div>`
+                        return data;
+
+           
+            // let p1=await fetchData(url);
+            // // await p1.then((data)=>{
+
+    
+            // //first news-card in page is required to be populated separately here and is predefined in html page so that clone of it can be used to make more cards in loadMore() function 
+            // card_headings[0].children[0].innerText=datanew.articles[0].title;
+            // cards[0].children[0].src=datanew.articles[0].urlToImage;
+            // headingPointer=0;
+            // loadMore();
+
                 
+            })
+            .then((data)=>{
+                urlglobal=`https://newsapi.org/v2/top-headlines?q=${data.name}&apikey=${api_key}`;
+                return fetchData(urlglobal);
+            }).
+            then(()=>{
+                console.log(datanew);
+            card_headings[0].children[0].innerText=datanew.articles[0].title;
+            cards[0].children[0].src=datanew.articles[0].urlToImage;
+            headingPointer=0;
+            loadMore();
+
             })
     })   
     }
