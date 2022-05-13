@@ -4,7 +4,7 @@ let main_row=document.querySelectorAll(".news-container .row");
 let api_key="e0d1b5c8f32b46308fead87de8e1bb4a";
 var flag=true;// true here means no previous headings are being loaded and no loader is in progress
 var pageno=1;
-var urlglobal=`https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=DEFAULT&apikey=${api_key}`;
+var urlglobal=`https://cors-anywhere.herokuapp.com/https://dukevaishnav1000.github.io/projectInGit/Assignment_projects/TeaTime.html/https://newsapi.org/v2/everything?q=DEFAULT&apikey=${api_key}`;
 var headingPointer=0;//points to recently loaded heading no.
 var datanew;
 var endOfResults=document.getElementsByClassName("endOfResults");
@@ -30,7 +30,7 @@ async function fetchData(url){
 }
 
 async function firstPageLoad(url){
-    url=`https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=DEFAULT&apikey=${api_key}`;
+    url=`https://cors-anywhere.herokuapp.com/https://dukevaishnav1000.github.io/projectInGit/Assignment_projects/TeaTime.html/https://newsapi.org/v2/everything?q=DEFAULT&apikey=${api_key}`;
     let p1=await fetchData(url);
     // await p1.then((data)=>{
 
@@ -159,7 +159,7 @@ function regionalNews()
                                     long=position.coords.longitude;
                                     lat= position.coords.latitude;
                                     api_key_location="716705298df9526d77246c79bb2be025";
-                                    api_string_longlat= `https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${api_key_location}`;
+                                    api_string_longlat= `https://cors-anywhere.herokuapp.com/https://dukevaishnav1000.github.io/projectInGit/Assignment_projects/TeaTime.html/https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${api_key_location}`;
                                     console.log("api_string_long_lat "+api_string_longlat);
                                     res(api_string_longlat);
                                     })
@@ -175,7 +175,7 @@ function regionalNews()
                         console.log(data.name);
                         console.log(data.sys.country);
                         let api_key_forState="0391f70e8f4fae26893451187eaabc1e";
-                        let apiString_state=`https://cors-anywhere.herokuapp.com/https://api.positionstack.com/v1/forward?access_key=${api_key_forState}&query=${data.name}`;
+                        let apiString_state=`https://cors-anywhere.herokuapp.com/https://dukevaishnav1000.github.io/projectInGit/Assignment_projects/TeaTime.html/https://api.positionstack.com/v1/forward?access_key=${api_key_forState}&query=${data.name}`;
                         console.log(apiString_state);
                         fetch(apiString_state)
                         .then(data=>{
@@ -191,7 +191,7 @@ function regionalNews()
                             return [city,state];
                                 })
                         .then(data=>{
-                                    urlglobal=`https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/Everything?q=${data[0]} OR ${data[1]}&apikey=${api_key}`;
+                                    urlglobal=`https://cors-anywhere.herokuapp.com/https://dukevaishnav1000.github.io/projectInGit/Assignment_projects/TeaTime.html/https://newsapi.org/v2/Everything?q=${data[0]} OR ${data[1]}&apikey=${api_key}`;
                                     fetchData(urlglobal)
                                     .then((resmsg)=>{
                                                         console.log(resmsg);
