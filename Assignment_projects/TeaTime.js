@@ -15,8 +15,8 @@ firstPageLoad(urlglobal);
 
 //fetchData() will help to set/update datanew variable with new values
 async function fetchData(url){
-    console.log("url  used by fetch function "+url,{mode:'no-cors'});
-    return new Promise((res,rej)=>{fetch("https://thingproxy.freeboard.io/fetch/"+url)
+    console.log("url  used by fetch function "+url);
+    return new Promise((res,rej)=>{fetch(url)
     .then(dataString=>{
         return dataString.json()
     },error=>{
