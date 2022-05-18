@@ -4,7 +4,7 @@ let main_row=document.querySelectorAll(".news-container .row");
 let api_key="e0d1b5c8f32b46308fead87de8e1bb4a";
 var flag=true;// true here means no previous headings are being loaded and no loader is in progress
 var pageno=1;
-var urlglobal=`https://cors-anywhere.herokuapp.com/https://dukevaishnav1000.github.io/projectInGit/Assignment_projects/TeaTime.html/https://newsapi.org/v2/everything?q=DEFAULT&apikey=${api_key}`;
+var urlglobal=`https://newsapi.org/v2/everything?q=DEFAULT&apikey=${api_key}`;
 var headingPointer=0;//points to recently loaded heading no.
 var datanew;
 var endOfResults=document.getElementsByClassName("endOfResults");
@@ -16,7 +16,8 @@ firstPageLoad(urlglobal);
 //fetchData() will help to set/update datanew variable with new values
 async function fetchData(url){
     console.log("url  used by fetch function "+url);
-    return new Promise((res,rej)=>{fetch(url).then(dataString=>{
+    return new Promise((res,rej)=>{fetch("https://thingproxy.freeboard.io/fetch/"+url)
+    .then(dataString=>{
         return dataString.json()
     },error=>{
         rej("error in fetchData()"+error);
@@ -30,9 +31,9 @@ async function fetchData(url){
 }
 
 async function firstPageLoad(url){
-    url=`https://cors-anywhere.herokuapp.com/https://dukevaishnav1000.github.io/projectInGit/Assignment_projects/TeaTime.html/https://newsapi.org/v2/everything?q=DEFAULT&apikey=${api_key}`;
+    url=`https://newsapi.org/v2/everything?q=DEFAULT&apikey=${api_key}`;
     let p1=await fetchData(url);
-    // await p1.then((data)=>{
+    
 
     
         //first news-card in page is required to be populated separately here and is predefined in html page so that clone of it can be used to make more cards in loadMore() function 
@@ -70,9 +71,6 @@ async function firstPageLoad(url){
                         },3500);
                     }).then((resmsg)=>{flag=true},rejmsg=>rejmsg);
                     
-
-                //    document.getElementsByClassName("loaderHolder")[0].style.display="none";
-
                 
                 }
         })
@@ -125,8 +123,7 @@ async function loadMore(){
 
 
     }
-    //headingPointer+=8;
-    
+ 
 }
 
 
@@ -159,7 +156,7 @@ function regionalNews()
                                     long=position.coords.longitude;
                                     lat= position.coords.latitude;
                                     api_key_location="716705298df9526d77246c79bb2be025";
-                                    api_string_longlat= `https://cors-anywhere.herokuapp.com/https://dukevaishnav1000.github.io/projectInGit/Assignment_projects/TeaTime.html/https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${api_key_location}`;
+                                    api_string_longlat=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${api_key_location}`;
                                     console.log("api_string_long_lat "+api_string_longlat);
                                     res(api_string_longlat);
                                     })
@@ -175,7 +172,7 @@ function regionalNews()
                         console.log(data.name);
                         console.log(data.sys.country);
                         let api_key_forState="0391f70e8f4fae26893451187eaabc1e";
-                        let apiString_state=`https://cors-anywhere.herokuapp.com/https://dukevaishnav1000.github.io/projectInGit/Assignment_projects/TeaTime.html/https://api.positionstack.com/v1/forward?access_key=${api_key_forState}&query=${data.name}`;
+                        let apiString_state=`https://api.positionstack.com/v1/forward?access_key=${api_key_forState}&query=${data.name}`;
                         console.log(apiString_state);
                         fetch(apiString_state)
                         .then(data=>{
@@ -191,7 +188,7 @@ function regionalNews()
                             return [city,state];
                                 })
                         .then(data=>{
-                                    urlglobal=`https://cors-anywhere.herokuapp.com/https://dukevaishnav1000.github.io/projectInGit/Assignment_projects/TeaTime.html/https://newsapi.org/v2/Everything?q=${data[0]} OR ${data[1]}&apikey=${api_key}`;
+                                    urlglobal=`https://newsapi.org/v2/Everything?q=${data[0]} OR ${data[1]}&apikey=${api_key}`;
                                     fetchData(urlglobal)
                                     .then((resmsg)=>{
                                                         console.log(resmsg);
