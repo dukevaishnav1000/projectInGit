@@ -3,7 +3,7 @@ let cards=document.getElementsByClassName("card");
 let main_row=document.querySelectorAll(".news-container .row");
 let api_key="9096badb1ebf85a7b6d90d339b36843d";
 // var pageno=1;
- var homeNewsUrl=`https://api.mediastack.com/v1/news?access_key=${api_key}&sources=bbc,cnn&limit=100`;
+ var homeNewsUrl=`http://api.mediastack.com/v1/news?access_key=${api_key}&sources=bbc,cnn&limit=100`;
 var type="homeNews";
 var newsPointer=0;
 //localStorage.clear();
