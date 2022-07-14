@@ -6,14 +6,14 @@ console.log("using rapid api");
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '176e53c2c3msh6856ff5f51b8cb1p1d9658jsn782c92bc0b1d',
+		'X-RapidAPI-Key': config.apikey,
 		'X-RapidAPI-Host': 'google-news1.p.rapidapi.com'
 	}
 };
 // var pageno=1;
  //var homeNewsUrl=`http://api.mediastack.com/v1/news?access_key=${api_key}&sources=bbc,cnn&limit=100`;
 var homeNewsUrl='https://google-news1.p.rapidapi.com/top-headlines?country=US&lang=en&limit=50';
- var type="homeNews";
+var type="homeNews";
 var newsPointer=0;
 //localStorage.clear();
 let sampleCard=main_row[0].children[0].cloneNode(true);
