@@ -1,13 +1,12 @@
 let card_headings=document.getElementsByClassName("card-img-overlay");
 let cards=document.getElementsByClassName("card");
 let main_row=document.querySelectorAll(".news-container .row");
-let api_key="9096badb1ebf85a7b6d90d339b36843d";
+let api_key="OukrZt1hvEcfJTqtJIr_FWwIgdqfZoqqdYMWh2J16Ko";
 console.log("using rapid api");
 const options = {
 	method: 'GET',
 	headers: {
-        
-		'x-api-key': config.apikey
+		'x-api-key': api_key
 	}
 };
 // var pageno=1;
