@@ -50,7 +50,7 @@ function loadNews(){
     let newsobj=JSON.parse(localStorage.getItem(type));
     let sampleCard;
     let temp;
-    for(let i=newsPointer;i<=newsPointer+24;i++)
+    for(let i=newsPointer;i<=newsPointer+25;i++)
     {
         sampleCard=main_row[0].children[0].cloneNode(true);
         sampleCard.children[0].children[0].src=newsobj["articles"][i]["media"];
@@ -59,7 +59,7 @@ function loadNews(){
         temp.href=newsobj["articles"][i]["link"];    // url hidden in news title
         main_row[0].appendChild(sampleCard);
     }
-    newsPointer+=25;
+    newsPointer+=26;
 }
 
 
