@@ -55,7 +55,7 @@ else
                   break;     
         case '7': homeNewsUrl='https://api.newscatcherapi.com/v2/latest_headlines?countries=IN,US,AU,UK,RU,CA,MX&lang=en&topic=food&page_size=100';
                   break;     
-        case '8': homeNewsUrl='https://api.newscatcherapi.com/v2/latest_headlines?countries=IN,US,AU,UK,RU,CA,MX&lang=en&topic=fashion&page_size=100';
+        case '8': homeNewsUrl='https://api.newscatcherapi.com/v2/latest_headlines?countries=IN,US,AU,UK,RU,CA,MX&lang=en&topic=beauty&page_size=100';
                   break;     
        
                 }
