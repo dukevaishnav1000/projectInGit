@@ -17,21 +17,14 @@ const options = {
 var homeNewsUrl='https://api.newscatcherapi.com/v2/latest_headlines?countries=IN,US,AU,UK,RU,CA,MX&lang=en&page_size=100';
 var type="homeNews";
 var newsPointer=0;
-//localStorage.clear();
-let sampleCard=main_row[0].children[0].cloneNode(true);
-//main_row[0].children[0].style.display="none";
+let sampleCard=main_row[0].children[0].cloneNode(true);            
+sampleCard.style.src="";
 main_row[0].children[0].style.display="none";
 
 
 setUrl();
 function setUrl(){
-// homeNewsUrl='https://api.newscatcherapi.com/v2/latest_headlines?countries=IN&lang=en&topics=sport,politics&page_size=100';
-// //location.reload();
-// homeNewsUrl='https://api.newscatcherapi.com/v2/latest_headlines?countries=IN&lang=en&topics=sport,politics&page_size=100';
-// console.log("homeNewsUrl now is "+homeNewsUrl);
 
-// window.removeEventListener("scroll",loadRequired);
-// firstLoad();
 var currenturl=window.location.href;
 let params=new URL(currenturl).searchParams;
 if(!params.has('specifics')){
@@ -75,7 +68,11 @@ window.addEventListener("scroll",loadRequired);
 async function checkDateAndLoad(){
 var todays=new Date();
 console.log("stored date = ",localStorage.getItem("load_date"));
-let x=todays.toDateString()==localStorage.getItem("load_date");
+let x;
+if(todays.toDateString()==localStorage.getItem("load_date"))
+x=true;
+else
+x=false;
 if(!x){
     localStorage.setItem("load_date",todays.toDateString());
     fetch(homeNewsUrl,options).then((response)=>{
@@ -83,7 +80,7 @@ if(!x){
     },(error)=>{
             console.log("error while fetching data from api");
     }).then((data)=>{
-        //console.log(data);
+        console.log(data);
         localStorage.setItem(type,JSON.stringify(data));
         console.log(localStorage.getItem(type));
         newsPointer=0;
@@ -99,8 +96,11 @@ if(!x){
 
 
 function displayNews(){
-    
-    let newsobj=JSON.parse(localStorage.getItem(type));
+    let newsobj=null;
+    while(newsobj==null){
+        newsobj=JSON.parse(localStorage.getItem(type));
+        console.log("newsobj is "+newsobj);
+    }
     let sampleCard;
     let limit=newsPointer+25;
     let temp;
@@ -162,8 +162,6 @@ function loadRequired() {
 }
 
 function randomImage(){
-
-    let arr=["images\deerImage_alt.png","images\rabbitImage_alt.webp","images\puppiesImage_alt.jpg","images\cuteRabbitImage_alt.jpg"]
+    let arr=["images\\deerImage_alt.png","images\\rabbitImage_alt.webp","images\\puppiesImage_alt.jpg","images\\cuteRabbitImage_alt.jpg"]
     return arr[Math.floor(Math.random(0,1)*4)];
-
 }
