@@ -139,7 +139,7 @@ function loadRequired() {
     if (eorFlag)
     endOfResults[0].style.display = "block";
     else
-    if ((!scrollinglock && window.scrollY + window.innerHeight) >= document.documentElement.scrollHeight - 200) {
+    if (!scrollinglock && (window.scrollY + window.innerHeight) >= document.documentElement.scrollHeight - 200) {
         scrollinglock=true;
             console.log("loading started");
             document.getElementsByClassName("loaderHolder")[0].style.display = "block";
