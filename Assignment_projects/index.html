@@ -4,166 +4,8 @@
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@200&family=Sacramento&display=swap" rel="stylesheet">  
         <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-    <style>
-    body{
-        font-size:50;
-    }
-    p{
-        text-align: center;
-    }
-    .merriweather{
-        font-family:'Merriweather',serif;
-    }
-    .sacrament{
-        font-family:'Sacramento','sans-serif';
-    }
-    .montserrat{
-        font-family:'montserrat',verdana;
-    }
-
-    .intro{
-        background-color: rgb(200, 240, 255);
-    }
-
-    .name{
-        font-size:200%;
-    }
-
-    .intro p,.mountain img{
-        margin:auto;
-    }
-    .cloud1{
-        margin-left: 65%;
-        margin-top:3.5%;
-        padding-bottom: 2%;
-    }
-    .cloud2{
-        margin-left: 22%;
-        padding-top:3%;
-        margin-bottom:0;
-    }
-
-    .commonprops{
-        text-align: center;
-       color:rgb(0, 130, 182); 
-       font-size:22;
-       font-weight:600;
-    }
-    .intro p{
-       text-align: center;
-       color:rgb(41, 171, 223); 
-       font-weight: 600;
-   }
-
-   .intro span{
-       text-decoration: underline;
-   }
-   .mountain{
-       padding-top: 0;
-   }
-
-   .mountain img{
-       width:50%;
-       height:auto;
-       margin-left:25%;
-
-   }
-   
-   hr{
-       border:none;
-       border-top:5px dotted rgb(159, 249, 255);
-       width:5%;
-       margin:auto;
-   }
-
-   .secondblock{
-       text-align: center;
-       margin-bottom:8%;
-   }
-   .secondblock img{
-       border:hidden;
-       border-width:2px;
-       border-radius:1000px;
-       margin-top:8%;
-   }
-
-  
-
-   .hello{
-       margin-top:5%;
-       margin-bottom:4%;
-   }
-
-   .headings{
-       font-weight: 600;
-       font-size:42;
-   }
-   
-   .company{
-      margin-top:0%;
-      margin-bottom:8%;
-   }
-    .commonprops2{
-       font-size:18;
-       color:black;
-   }
-
-
-   .myskills{
-       margin-top: 8%;
-   }
-
-   .rightFloating{
-    width:60%;
-    float:right;
-    text-align:left;
-    margin-right:8%
-   }
-
-   .leftFloating{
-    padding:0;width:15%;margin-left:8%;
-   }
-
-   .project1Name{
-    color:#00008b;
-   }
-
-   .projects{
-    width:100%;
-    text-align: center;   
-   }
-
-
-   .thirdblock{
-       text-align: center;
-   }
-   .contactme{
-    background-color: #11cdd4;
-    border-radius: 10px;
-    font-size:25;
-    border:none;
-    color:white;
-    font-weight:500;
-   }
-
-   .footer{
-       background-color:#66BFBF;
-       padding-left: 42%;
-   }
-
-   .git,.linkin{
-       width:5%;
-       Color:#11999e;
-       font-size:25;
-   }
-
-   .git{
-       padding:2%;
-       padding-left: 0;
-       margin-left:0%;
-       margin-right:10%;
-   }
-   </style>
+        
+    <link href="index.css" rel="stylesheet"></link>
     </head>
     <body>
         <div class="intro">
@@ -201,26 +43,108 @@
                 </div>
             </div>
             
-            <div class="projects">
-                <h5 class="commonprops montserrat">Projects</h5>
+            <div class="projects" id="projects">
+                <div>
+                    <p class="commonprops montserrat headings">Projects</p>
+                </div>
+                
                 <ul type="none" class="commonprops montserrat">
-                    <li class="commonprops montserrat">
-                         
-                        <h6 class="commonprops montserrat project1Name" ><strong>Weather-telling site </strong><a target=_blank href="https://dukevaishnav1000.github.io/projectInGit/Assignment_projects/weather_app.html">(Live)</a>
-                            <span class="commonprops2 merriweather "> &nbsp;&nbsp;# A site which tells weather of your current location or any city in world .
-                                <p class="commonprops2 merriweather">Technology : HTML, CSS , JAVASCRIPT</p>
-                            </span>
-                        </h6>
-                        
+                    
+                    <li>
+                        <div class="projectItem">
+                            <div class="commonprops montserrat project1Name">
+                            <strong>TeaTime &nbsp;</strong>
+                            <a target=_blank href="https://dukevaishnav1000.github.io/projectInGit/Assignment_projects/TeaTime_newsCatcher.html">Live</a>&nbsp;
+                            <a target=_blank href="https://github.com/dukevaishnav1000/projectInGit/blob/master/Assignment_projects/TeaTime_newsCatcher.html">Git</a>
+                            </div>
+                            <div class="commonprops2 merriweather projectdescr">
+                                &nbsp;&nbsp;A News website which provide latest news of the day
+                                <div class="commonprops2 merriweather projectdescr">
+                                    <strong>Technology : HTML, CSS , JAVASCRIPT , <span class="technologies">Bootstrap</span></strong>
+                                </div>
+                            </div>
+                        </div>                        
                     </li>
-                    <li class="commonprops montserrat">
+                    
+                    <li>
+                        <div class="projectItem">
+                            <div class="commonprops montserrat project1Name">
+                            <strong>Crypto Tracker &nbsp;</strong>
+                            <a target=_blank href="https://dukevaishnav1000.github.io/react_crypto_tracker/">Live</a>&nbsp;
+                            <a target=_blank href="https://github.com/dukevaishnav1000/react_crypto_tracker.git">Git</a>
+                            </div>
+                            <div class="commonprops2 merriweather projectdescr">
+                                &nbsp;&nbsp;A Site displaying current price of all crypto currencies
+                                <div class="commonprops2 merriweather projectdescr">
+                                    <strong>Technology : HTML, CSS , JAVASCRIPT ,<span class="technologies"> ReactJS</span></strong>
+                                </div>
+                            </div>
+                        </div>                        
+                    </li>
+
+                    <li>
+                        <div class="projectItem">
+                            <div class="commonprops montserrat project1Name">
+                            <strong>Calculator, Digital Clock &nbsp;</strong>
+                            <a target=_blank href="https://github.com/dukevaishnav1000/CoreJavaProjects.git">Git</a>
+                            </div>
+                            <div class="commonprops2 merriweather projectdescr">
+                                &nbsp;&nbsp;Daily utility apps                                
+                                <div class="commonprops2 merriweather projectdescr">
+                                    <strong>Technology :<span class="technologies"> Core Java , Swing</span></strong>
+                                </div>
+                            </div>
+                        </div>                        
+                    </li>
+
+
+                    <li>
+                        <div class="projectItem">
+                            <div class="commonprops montserrat project1Name">
+                            <strong>Tic-Tac Toe game &nbsp;</strong>
+                            <a target=_blank href="https://dukevaishnav1000.github.io/my-app/">Live</a>&nbsp;
+                            <a target=_blank href="https://github.com/dukevaishnav1000/my-app.git">Git</a>
+                            </div>
+                            <div class="commonprops2 merriweather projectdescr">
+                                &nbsp;&nbsp;A simple game demonstrating ReactJS capabilities .                                
+                                <div class="commonprops2 merriweather projectdescr">
+                                    <strong>Technology : HTML, CSS , JAVASCRIPT<span class="technologies"> , ReactJS</span></strong>
+                                </div>
+                            </div>
+                        </div>                        
+                    </li>
+                    
+                    <li>
                          
-                        <h6 class="commonprops montserrat project1Name" ><strong>Typing-Test Game </strong><a target=_blank href="https://dukevaishnav1000.github.io/projectInGit/Assignment_projects/typingtest.html">(Live)</a>
-                            <span class="commonprops2 merriweather "> &nbsp;&nbsp;# A game to test your typing speed and accuracy
-                                <p class="commonprops2 merriweather">Technology : HTML, CSS , JAVASCRIPT</p>
-                            </span>
-                        </h6>
-                        
+                        <div class="projectItem">
+                            <div class="commonprops montserrat project1Name">
+                            <strong>Weather-telling site &nbsp;</strong>
+                            <a target=_blank href="https://dukevaishnav1000.github.io/projectInGit/Assignment_projects/weather_app.html">Live</a>&nbsp;
+                            <a target=_blank href="https://github.com/dukevaishnav1000/projectInGit/blob/master/Assignment_projects/weather_app.html">Git</a>
+                            </div>
+                            <div class="commonprops2 merriweather projectdescr">
+                                &nbsp;&nbsp;A site which tells weather of your current location or any city in world .
+                                <div class="commonprops2 merriweather projectdescr">
+                                    <strong>Technology : HTML, CSS , JAVASCRIPT</strong>
+                                </div>
+                            </div>
+                        </div>                        
+                    </li>
+
+                    <li>
+                        <div class="projectItem">
+                            <div class="commonprops montserrat project1Name">
+                                <strong>Typing-Test Game &nbsp;</strong>
+                                <a target=_blank href="https://dukevaishnav1000.github.io/projectInGit/Assignment_projects/typingtest.html">Live</a>&nbsp;
+                                <a target=_blank href="https://github.com/dukevaishnav1000/projectInGit/blob/master/Assignment_projects/typingtest.html">Git</a>
+                            </div>
+                            <div class="commonprops2 merriweather projectdescr">
+                                &nbsp;&nbsp;A game to test your typing speed and accuracy
+                                <div class="commonprops2 merriweather projectdescr">
+                                    <strong>Technology : HTML, CSS , JAVASCRIPT</strong>
+                                </div>
+                            </div>
+                        </div>                        
                     </li>
                 </ul>
             </div>
@@ -235,5 +159,5 @@
             </div>
             <br>
             <div class="footer"><i class="fab fa-github git">Github</i><i class="fab fa-linkedin linkin">LinkedIn</i></div> 
-    </body>
+        </body>
 </html>

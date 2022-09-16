@@ -1,0 +1,188 @@
+body{
+    font-size:50;
+}
+p{
+    text-align: center;
+}
+.merriweather{
+    font-family:'Merriweather',serif;
+}
+.sacrament{
+    font-family:'Sacramento','sans-serif';
+}
+.montserrat{
+    font-family:'montserrat',verdana;
+}
+
+.intro{
+    background-color: rgb(200, 240, 255);
+}
+
+.name{
+    font-size:200%;
+}
+
+.intro p,.mountain img{
+    margin:auto;
+}
+.cloud1{
+    margin-left: 65%;
+    margin-top:3.5%;
+    padding-bottom: 2%;
+}
+.cloud2{
+    margin-left: 22%;
+    padding-top:3%;
+    margin-bottom:0;
+}
+
+.commonprops{
+    text-align: center;
+   color:rgb(0, 130, 182); 
+   font-size:22;
+   font-weight:600;
+}
+
+.commonprops2{
+    font-size:18;
+    color:black;
+ }
+ 
+
+.headings{
+    font-weight: 600;
+    font-size:42;
+ }
+
+.intro p{
+   text-align: center;
+   color:rgb(41, 171, 223); 
+   font-weight: 600;
+}
+
+.intro span{
+   text-decoration: underline;
+}
+.mountain{
+   padding-top: 0;
+}
+
+.mountain img{
+   width:50%;
+   height:auto;
+   margin-left:25%;
+
+}
+
+hr{
+   border:none;
+   border-top:5px dotted rgb(159, 249, 255);
+   width:5%;
+   margin:auto;
+}
+
+.secondblock{
+   text-align: center;
+   margin-bottom:8%;
+}
+.secondblock img{
+   border:hidden;
+   border-width:2px;
+   border-radius:1000px;
+   margin-top:8%;
+}
+
+
+
+.hello{
+   margin-top:5%;
+   margin-bottom:4%;
+}
+
+
+.company{
+  margin-top:0%;
+  margin-bottom:8%;
+}
+
+
+.myskills{
+   margin-top: 8%;
+}
+
+.rightFloating{
+width:60%;
+float:right;
+text-align:left;
+margin-right:8%
+}
+
+.leftFloating{
+padding:0;width:15%;margin-left:8%;
+}
+
+.project1Name{
+color:#00008b;
+
+}
+
+.projects {
+width:100%;
+text-align: center;   
+margin-bottom: 8%;
+margin-top: 80px;
+}
+
+.projectItem{
+    margin-bottom: 8vh;
+    width:100%;
+    text-align: center;    
+}
+
+.projectdescr{
+font-size:16;
+font-weight: normal;
+margin-top: 1vh;
+}
+
+.technologies{
+    color:darkmagenta;
+    font-weight: 600;
+}
+
+@media screen and (max-width:500px){
+    .projectdescr{
+        font-size:10;
+        margin-top:20px;
+        }
+}
+
+.thirdblock{
+   text-align: center;
+}
+.contactme{
+background-color: #11cdd4;
+border-radius: 10px;
+font-size:25;
+border:none;
+color:white;
+font-weight:500;
+}
+
+.footer{
+   background-color:#66BFBF;
+   padding-left: 42%;
+}
+
+.git,.linkin{
+   width:5%;
+   Color:#11999e;
+   font-size:25;
+}
+
+.git{
+   padding:2%;
+   padding-left: 0;
+   margin-left:0%;
+   margin-right:10%;
+}
