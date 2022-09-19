@@ -1,7 +1,7 @@
 let card_headings=document.getElementsByClassName("card-img-overlay");
 let cards=document.getElementsByClassName("card");
 let main_row=document.querySelectorAll(".news-container .row");
-let api_key="2QWOA8aJX4GNH2XxRcwrCWp6OUt3BzL8nTcKLZfaxx8";
+let api_key="zp1Vngp9ivB_naNlZVwgnuI4_obp5Ozork-qBTJamyc";
 let loader=document.getElementsByClassName("loaderHolder");
 var endOfResults=document.getElementsByClassName("endOfResults");
 let eorFlag=false;
