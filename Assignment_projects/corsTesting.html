@@ -1,0 +1,23 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+
+        <div class="displayData">
+
+        </div>
+
+        <script>
+            let displayArea=document.getElementsByClassName("displayData");
+            fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=e0d1b5c8f32b46308fead87de8e1bb4a").then((res)=>{
+             return res.json();             
+            }).then(data=>{
+                let {articles}=data;
+                console.log(articles);
+            displayArea[0].innerHTML=JSON.stringify(articles);
+            })
+        </script>
+    </body>
+    
+</html>
