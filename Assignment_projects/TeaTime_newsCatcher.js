@@ -1,7 +1,7 @@
 let card_headings=document.getElementsByClassName("card-img-overlay");
 let cards=document.getElementsByClassName("card");
 let main_row=document.querySelectorAll(".news-container .row");
-let api_key="rYIsU8sHBl6jJGfd06HlwetqChUZ8NrbrHOvcOx7nzo";
+let api_key="jbwSsxwZIy5SP2RVaLTVM8kXR3ZbHrt8osAsL-cJJcw";
 let loader=document.getElementsByClassName("loaderHolder");
 var endOfResults=document.getElementsByClassName("endOfResults");
 let eorFlag=false;
@@ -13,6 +13,8 @@ const options = {
 		'x-api-key': api_key
 	}
 };
+
+
 
 var homeNewsUrl='https://api.newscatcherapi.com/v2/latest_headlines?countries=IN,US,AU,UK,RU,CA,MX&lang=en&page_size=100';
 var type="homeNews";
