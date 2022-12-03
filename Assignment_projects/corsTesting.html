@@ -9,9 +9,12 @@
         </div>
 
         <script>
+            
             let displayArea=document.getElementsByClassName("displayData");
-            fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=e0d1b5c8f32b46308fead87de8e1bb4a").then((res)=>{
-             return res.json();             
+            fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://wikipedia.org')}`).then((res)=>{
+             return res.json();         
+            },rej=>{
+                console.log("Error while feching: ",rej)
             }).then(data=>{
                 let {articles}=data;
                 console.log(articles);
